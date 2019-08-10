@@ -1,0 +1,313 @@
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --greyish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: var(--red);
+    background-image: url("./images/bg-intro-mobile.png");
+    font-size: 16px;
+    text-align: left;
+}
+
+.wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0 3.5rem 0;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.1rem
+}
+
+header p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* form */
+
+.form-btn-1 {
+    width: 100%;
+    height: 4.5rem;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: none;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* form input's (claimform)*/
+
+.claimform {
+    height: 25.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.claimform>* {
+    width: 90%;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.claimform li input {
+    height: 3rem;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* 
+.error::placeholder {
+    color: var(--red);
+} */
+
+.claimform li span {
+    font-size: 0.6rem;
+    color: var(--red);
+    font-style: italic;
+    float: right;
+    max-height: 0.5rem;
+    display: none;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+input[type] {
+    font-size: 0.9rem;
+    padding-left: 6%;
+    color: var(--greyish-blue);
+    font-weight: 600;
+    color: black;
+    outline-width: thin;
+    outline-color: black;
+}
+
+.claimform li .error {
+    border: 1px solid var(--red);
+    background: url(./images/icon-error.svg) no-repeat 95% 50%;
+}
+
+.claimform li .error::placeholder {
+    color: var(--red);
+}
+
+
+/* claim form btn */
+
+.form-btn-2 {
+    border: none;
+    width: 100%;
+    background-color: var(--green);
+    height: 3rem;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 2px hsl(154, 39%, 51%);
+    text-transform: uppercase;
+}
+
+.form-btn-2:active {
+    outline: none;
+    box-shadow: 0 4px var(--green);
+    font-size: 0.83rem;
+    font-weight: bold;
+    transform: translateY(2px);
+    transform-origin: 0% 100%;
+}
+
+/* disclaimer */
+.disc {
+    width: 95%;
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--greyish-blue);
+}
+
+.disc a {
+    color: var(--red);
+    font-weight: bold;
+}
+
+
+/* footer */
+
+footer {
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--dark-blue)
+}
+
+.attribution a {
+    color: var(--blue);
+}
+
+.attribution a:hover {
+    color: white;
+    transition: ease-in-out;
+    text-decoration: none;
+}
+
+/* tablet */
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .claimform {
+        height: 27rem;
+    }
+
+    .claimform li span {
+        font-size: 0.7rem;
+    }
+
+    header p {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding-bottom: 1rem;
+    }
+}
+
+/* laptop & desktop */
+
+@media screen and (min-width: 800px) {
+
+    body {
+        background-image: url("./images/bg-intro-desktop.png");
+        background-size: cover;
+    }
+
+    .wrapper {
+        padding-top: 5rem;
+        height: 95vh;
+        width: 80%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header {
+        width: 50%;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        width: 80%;
+        text-align: left;
+    }
+
+    header p {
+        width: 95%;
+        font-size: 0.7rem;
+        text-align: left;
+    }
+
+    .form-wrapper {
+        width: 50%;
+    }
+
+    .form-btn-1 {
+        flex-direction: row;
+    }
+
+    .form-btn-1 #span {
+        padding-right: 0.25rem;
+    }
+
+    footer {
+        padding-bottom: 0;
+    }
+}
+
+/* fullHD */
+
+@media screen and (min-width: 1400px) {
+    h1 {
+        font-size: 3.6rem;
+        width: 85%;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    .form-wrapper>* {
+        width: 75%;
+    }
+
+    .claimform {
+        height: 28rem;
+    }
+
+    .claimform li input {
+        height: 3.5rem;
+    }
+
+    input::placeholder {
+        font-size: 0.8rem;
+    }
+
+    btn-2 {
+        height: 3.5rem;
+    }
+}

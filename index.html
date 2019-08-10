@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <script src="https://kit.fontawesome.com/f20a296f9d.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        Learn to code by watching others
+      </h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </header>
+
+
+    <div class="form-wrapper">
+      <button class="form-btn-1" type="button"><span id="span"><span class="bold">Try it free 7 days</span>
+          then</span> $20/mo. thereafter</button>
+      <form class="claimform" novalidate>
+        <li>
+          <input type="text" name="firstname" id="fname" placeholder="First Name" aria-label="first name">
+          <span>First Name cannot be empty</span>
+        </li>
+        <li>
+          <input type="text" name="lastname" id="lname" placeholder="Last Name" aria-label="last name">
+          <span class="error-msg">Last Name cannot be empty</span>
+        </li>
+        <li>
+          <input type="email" name="email" id="email" placeholder="Email address" aria-label="email">
+          <span class="error-msg">Looks like this is not an email</span>
+        </li>
+        <li>
+          <input type="password" name="password" id="pwd" placeholder="Password" aria-label="password">
+          <span class="error-msg">Password cannot be empty</span>
+        </li>
+        <li>
+          <button type="submit" class="form-btn-2">claim your free trial</button class="error-msg">
+        </li>
+        <li>
+          <p class="disc">
+            By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+          </p>
+        </li>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">John Samuel</a>.
+    </p>
+  </footer>
+  <script src="./index.js"></script>
+
+</body>
+
+</html>
